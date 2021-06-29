@@ -1,0 +1,29 @@
+{
+  "name": "rollup-plugin-alioss",
+  "version": "1.0.0",
+  "description": "",
+  "author": "haodaking",
+  "main": "dist/rollup-plugin-alioss.cjs.js",
+  "module": "dist/rollup-plugin-alioss.es.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "rollup",
+    "plugin",
+    "rollup-plugin-alioss"
+  ],
+  "files": [
+    "dist",
+    "readme.md"
+  ],
+  "dependencies": {
+    "ali-oss": "^6.15.2",
+    "chalk": "^4.1.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.0",
+    "rollup": "^2.52.3"
+  },
+  "license": "MIT"
+}
