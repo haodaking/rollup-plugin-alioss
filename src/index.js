@@ -9,7 +9,7 @@ let client = null
 
 async function uploadTarget(src, dest) {
   try {
-    const result = await client.put(dest, path.join(__dirname, src))
+    const result = await client.put(dest, src)
     log(chalk.green('上传成功', result.url))
   } catch (e) {
     log(chalk.red('上传失败', src))
@@ -18,7 +18,7 @@ async function uploadTarget(src, dest) {
 }
 
 function generateUploadTarget(src, dest) {
-  fs.readdir(path.join(__dirname, src), function (err, files) {
+  fs.readdir(src, function (err, files) {
     if (err) {
       log(err)
       return
@@ -26,7 +26,7 @@ function generateUploadTarget(src, dest) {
     files.forEach(function (file) {
       const _src = src + '/' + file
       const _dest = dest + '/' + file
-      const stats = fs.statSync(path.join(__dirname, _src))
+      const stats = fs.statSync(_src)
       // 判断是否为文件
       stats.isFile() && uploadTarget(_src, _dest)
       // 判断是否为文件夹
@@ -38,7 +38,7 @@ function generateUploadTarget(src, dest) {
 export default function aliOSS(options = {}) {
   const {
     oss = { region: '', accessKeyId: '', accessKeySecret: '', bucket: '' },
-    hook = 'buildEnd',
+    hook = 'writeBundle',
     src = '',
     dest = ''
   } = options

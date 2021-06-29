@@ -1,12 +1,16 @@
 {
   "name": "rollup-plugin-alioss",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "",
   "author": "haodaking",
+  "repository": "haodaking/rollup-plugin-alioss",
+  "homepage": "https://github.com/haodaking/rollup-plugin-alioss/tree/main#readme",
+  "bugs": "https://github.com/haodaking/rollup-plugin-alioss/issues",
   "main": "dist/rollup-plugin-alioss.cjs.js",
   "module": "dist/rollup-plugin-alioss.es.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "ava"
   },
   "keywords": [
     "rollup",

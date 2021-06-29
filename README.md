@@ -1,4 +1,4 @@
-# rollup-plugin-alioss
+# rollup-plugin-alioss [![npm](https://img.shields.io/npm/v/rollup-plugin-alioss)](https://www.npmjs.com/package/rollup-plugin-alioss)
 
 Rollup 上传文件到 Ali-OSS 的插件
 
